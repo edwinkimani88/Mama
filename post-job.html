@@ -113,7 +113,7 @@
                                 <input type="tel" id="poster-phone" placeholder="e.g. 07XX XXX XXX" required>
                             </div>
                         </div>
-                        <p style="font-size: 0.82rem; color: var(--gray); margin-bottom: 24px;">🔒 Your phone number is kept private. Workers pay KSh 30 to unlock it — so only serious people contact you.</p>
+                        <p style="font-size: 0.82rem; color: var(--gray); margin-bottom: 24px;">🔒 Your phone number is kept private. Workers pay a small fee to unlock it — so only serious people contact you.</p>
                         <button type="submit" class="btn btn-green btn-lg" style="width: 100%; justify-content: center;">📋 Post My Job for Free →</button>
                     </form>
                 </div>
@@ -241,7 +241,8 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                    <img src="assets/logo.png" alt="Mama Network" class="footer-logo-img" onerror="this.style.display='none'">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Mama Network" class="footer-logo-img">
                     <span class="footer-logo-text">Mama Network</span>
                 </div>
                 <p>Mahali kazi inapatikana.<br>A place where hustle meets opportunity. 🇰🇪</p>
@@ -267,6 +268,7 @@
                 <ul>
                     <li><a href="#">Nairobi, Kenya</a></li>
                     <li><a href="mailto:info@mamanetwork.co.ke">info@mamanetwork.co.ke</a></li>
+                    <li><a href="#">0714 674 375</a></li>
                 </ul>
             </div>
         </div>
@@ -288,7 +290,7 @@ function submitJob(e) {
 function submitWorker(e) {
     e.preventDefault();
     document.getElementById('modal-title').textContent = '🌸 Profile Created!';
-    document.getElementById('modal-msg').textContent = 'Your worker profile is live! Start browsing jobs and unlock contacts for just KSh 30. Good luck, hustler!';
+    document.getElementById('modal-msg').textContent = 'Your worker profile is live! Start browsing jobs and unlock contacts to get hired. Good luck, hustler!';
     document.getElementById('success-modal').style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
