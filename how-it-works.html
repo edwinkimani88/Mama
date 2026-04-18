@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | Mama Network 🇰🇪</title>
+    <meta name="description" content="Learn how Mama Network connects Kenyan workers with job posters. Simple, fair, and fast — for Wenye Kazi and Watafuta Kazi.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="trust-bar">
+    🇰🇪 Built for Kenyans &nbsp;<span>|</span>&nbsp; Simple, Fair & Human &nbsp;<span>|</span>&nbsp; Mahali kazi inapatikana
+</div>
+
+<header>
+    <div class="container">
+        <nav class="nav-inner">
+                <a href="index.html" class="logo-wrap">
+                    <img src="assets/logo.png" alt="Mama Network Logo" class="logo-img">
+                    <span class="logo-text">Mama <span>Network</span></span>
+                </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="workers.html">Find Workers</a></li>
+                <li><a href="how-it-works.html" class="active">How It Works</a></li>
+                <li><a href="post-job.html">Post a Job</a></li>
+            </ul>
+            <div class="nav-ctas">
+                <a href="jobs.html" class="btn btn-outline">Find Work</a>
+                <a href="post-job.html" class="btn btn-primary">Post a Job</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <div class="section-tag" style="background: rgba(255,255,255,0.15); color: white;">💡 Simple Process</div>
+            <h1>How Mama Network Works</h1>
+            <p>Simple steps for both job posters (Wenye Kazi) and job seekers (Watafuta Kazi). No complicated systems — just connection.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Tabs -->
+<section style="background: white; padding: 0; border-bottom: 1px solid #e9ecef; position: sticky; top: 73px; z-index: 100;">
+    <div class="container">
+        <div style="display: flex; gap: 0;">
+            <button class="tab-btn active" onclick="showTab('poster', this)" style="padding: 18px 32px; font-weight: 700; font-size: 1rem; border: none; background: none; cursor: pointer; border-bottom: 3px solid var(--secondary); color: var(--secondary);">📋 For Job Posters (Wenye Kazi)</button>
+            <button class="tab-btn" id="seekers" onclick="showTab('seeker', this)" style="padding: 18px 32px; font-weight: 700; font-size: 1rem; border: none; background: none; cursor: pointer; border-bottom: 3px solid transparent; color: var(--gray);">🔍 For Job Seekers (Watafuta Kazi)</button>
+        </div>
+    </div>
+</section>
+
+<!-- Job Poster Steps -->
+<section class="section" id="tab-poster">
+    <div class="container">
+        <div class="section-heading center">
+            <div class="section-tag">📋 Wenye Kazi</div>
+            <h2>Post Your Job in <span>3 Easy Steps</span></h2>
+            <p>You don't need to pay. You simply get connected to workers who are ready to show up.</p>
+        </div>
+
+        <div class="steps-grid" style="max-width: 800px; margin: 0 auto 60px;">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>Post Your Job for Free</h3>
+                    <p>No account needed initially. Just fill in a simple form — location, type of work, and payment. Done in under 3 minutes.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3>Add Simple Details</h3>
+                    <p>Tell us where you are (e.g., Kilimani, Westlands), what pay you're offering, what type of task it is, and any preferences.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>Workers Reach Out to You</h3>
+                    <p>Interested workers pay a small fee to see your contact, then reach you directly. You review their profile and decide.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">🎉</div>
+                <div class="step-content">
+                    <h3>You're Connected!</h3>
+                    <p>No middlemen. You talk directly, agree on terms, and get the work done. It's that simple.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #f0f7f2, #fff8ea); border-radius: 24px; padding: 48px; max-width: 700px; margin: 0 auto;">
+            <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 20px; color: var(--dark);">⚖️ The Fair System for Poster</h3>
+            <ul style="display: flex; flex-direction: column; gap: 16px;">
+                <li style="display: flex; gap: 14px; align-items: flex-start;"><span style="font-size: 1.5rem;">✅</span><div><strong>Job posters post for FREE</strong><br><span style="color: var(--gray); font-size:0.9rem;">You never pay to list a job on Mama Network.</span></div></li>
+                <li style="display: flex; gap: 14px; align-items: flex-start;"><span style="font-size: 1.5rem;">✅</span><div><strong>Workers come to you</strong><br><span style="color: var(--gray); font-size:0.9rem;">They find your listing and pay to contact you — you don't chase anyone.</span></div></li>
+                <li style="display: flex; gap: 14px; align-items: flex-start;"><span style="font-size: 1.5rem;">✅</span><div><strong>See worker profiles first</strong><br><span style="color: var(--gray); font-size:0.9rem;">Every worker has a visible profile — photo, skills, and "Previously Hired" history.</span></div></li>
+            </ul>
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="post-job.html" class="btn btn-green btn-lg">📋 Post My Job Now — It's Free</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Job Seeker Steps -->
+<section class="section" id="tab-seeker" style="display: none;">
+    <div class="container">
+        <div class="section-heading center">
+            <div class="section-tag">🔍 Watafuta Kazi</div>
+            <h2>Find Work in <span>4 Simple Steps</span></h2>
+            <p>Your profile is your CV. No fancy papers needed — just you, your skills and your availability.</p>
+        </div>
+
+        <div class="steps-grid" style="max-width: 800px; margin: 0 auto 60px;">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>Create Your Free Profile</h3>
+                    <p>Add your photo, name, age, location (e.g. Nairobi) and what work you do. No long essay. Just the basics.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3>Browse Available Jobs</h3>
+                    <p>See real jobs posted near you — house cleaning, cooking, babysitting, gardening, and more. Filter by category.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>Pay a Small Fee to Unlock</h3>
+                    <p>When you find a job you want, pay a small once-off access fee to unlock the job poster's phone number. The fee varies by job salary level — from as low as KSh 100 for small kibarua up to KSh 2,000 for high-paying monthly positions.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h3>Contact &amp; Secure the Job</h3>
+                    <p>Reach out directly to the poster. Agree on your terms. Show up and work. It's that simple.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #f0f7f2, #fff8ea); border-radius: 24px; padding: 48px; max-width: 700px; margin: 0 auto 50px;">
+            <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 20px; color: var(--dark);">👤 Your Worker Profile Grows Over Time</h3>
+            <ul style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+                <li style="display: flex; gap: 14px; align-items: flex-start;"><span style="font-size: 1.5rem;">📸</span><div><strong>Clear photo</strong><br><span style="color: var(--gray); font-size:0.9rem;">So job posters know who they're hiring.</span></div></li>
+                <li style="display: flex; gap: 14px; align-items: flex-start;"><span style="font-size: 1.5rem;">🏷️</span><div><strong>"Previously Hired" tags</strong><br><span style="color: var(--gray); font-size:0.9rem;">After each job, your profile gets stronger.</span></div></li>
+                <li style="display: flex; gap: 14px; align-items: flex-start;"><span style="font-size: 1.5rem;">⭐</span><div><strong>"Recommended" status</strong><br><span style="color: var(--gray); font-size:0.9rem;">Past employers vouch for you publicly on your profile.</span></div></li>
+            </ul>
+            <blockquote style="border-left: 4px solid var(--secondary); padding-left: 20px; color: var(--gray); font-style: italic; font-size: 0.95rem;">"No long descriptions. No complicated resumes. Just proof through action."</blockquote>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="workers.html" class="btn btn-green btn-lg">📸 Create My Worker Profile Free</a>
+            <a href="jobs.html" class="btn btn-outline btn-lg" style="margin-left: 16px;">🔍 Browse Jobs Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-heading center">
+            <div class="section-tag">❓ FAQs</div>
+            <h2>Common <span>Questions</span></h2>
+        </div>
+        <div style="max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+            <div style="background: var(--white); border-radius: 14px; padding: 24px 28px; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 10px;">💰 How much does it cost to post a job?</h3>
+                <p style="color: var(--gray); font-size: 0.92rem;">Posting a job is completely free. You never pay anything to list your job or to be contacted by workers.</p>
+            </div>
+            <div style="background: var(--white); border-radius: 14px; padding: 24px 28px; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 10px;">🔓 How much do workers pay to unlock a job?</h3>
+                <p style="color: var(--gray); font-size: 0.92rem;">The access fee varies based on the job's salary level — keeping it proportionate and fair:</p>
+                <ul style="margin-top: 10px; display: flex; flex-direction: column; gap: 6px;">
+                    <li style="font-size: 0.88rem; color: var(--gray);">🟢 Small kibarua (under KSh 1,000) &rarr; <strong style="color: var(--secondary);">KSh 100</strong></li>
+                    <li style="font-size: 0.88rem; color: var(--gray);">🟡 Daily / weekly jobs &rarr; <strong style="color: var(--secondary);">KSh 200</strong></li>
+                    <li style="font-size: 0.88rem; color: var(--gray);">🟠 Monthly mid-range (KSh 5K–15K) &rarr; <strong style="color: var(--secondary);">KSh 1,000</strong></li>
+                    <li style="font-size: 0.88rem; color: var(--gray);">🔴 Monthly KSh 15,000+ &rarr; <strong style="color: var(--secondary);">KSh 2,000</strong></li>
+                </ul>
+                <p style="margin-top: 10px; font-size: 0.88rem; color: var(--gray);">This ensures only genuinely interested workers reach you — no wasted time for anyone.</p>
+            </div>
+            <div style="background: var(--white); border-radius: 14px; padding: 24px 28px; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 10px;">📸 Do I need a photo to apply for jobs?</h3>
+                <p style="color: var(--gray); font-size: 0.92rem;">We strongly encourage a clear, honest profile photo. It helps job posters trust you and improves your chances of getting hired. It's not mandatory but highly recommended.</p>
+            </div>
+            <div style="background: var(--white); border-radius: 14px; padding: 24px 28px; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 10px;">🇰🇪 What areas does Mama Network cover?</h3>
+                <p style="color: var(--gray); font-size: 0.92rem;">We currently focus on Nairobi and surrounding areas — Kikuyu, Kiambu, Ruaka, Ngong, Machakos — and we're growing quickly across Kenya.</p>
+            </div>
+            <div style="background: var(--white); border-radius: 14px; padding: 24px 28px; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 10px;">⭐ What is "Previously Hired"?</h3>
+                <p style="color: var(--gray); font-size: 0.92rem;">When a job poster confirms that you completed a job, your profile gets a "Previously Hired" badge. Over time this builds your reputation and makes it easier to get more jobs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>Ready to Get Started?</h2>
+        <p>Post a job for free or create your worker profile today. Let's connect Kenya to work.</p>
+        <div class="btn-row">
+            <a href="post-job.html" class="btn btn-primary btn-lg">📋 Post a Job — Free</a>
+            <a href="workers.html" class="btn btn-outline-white btn-lg">👤 Create Worker Profile</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Mama Network" class="footer-logo-img" onerror="this.style.display='none'">
+                    <span class="footer-logo-text">Mama Network</span>
+                </div>
+                <p>Mahali kazi inapatikana.<br>A place where hustle meets opportunity. 🇰🇪</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="jobs.html">Browse Jobs</a></li>
+                    <li><a href="workers.html">Find Workers</a></li>
+                    <li><a href="post-job.html">Post a Job</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>For Workers</h4>
+                <ul>
+                    <li><a href="workers.html">Create Profile</a></li>
+                    <li><a href="jobs.html">Browse Opportunities</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Nairobi, Kenya</a></li>
+                    <li><a href="mailto:info@mamanetwork.co.ke">info@mamanetwork.co.ke</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mama Network Kenya. Built with ❤️</p>
+            <span class="footer-flag">🇰🇪</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+function showTab(tab, btn) {
+    document.getElementById('tab-poster').style.display = tab === 'poster' ? 'block' : 'none';
+    document.getElementById('tab-seeker').style.display = tab === 'seeker' ? 'block' : 'none';
+    document.querySelectorAll('.tab-btn').forEach(b => {
+        b.style.borderBottom = '3px solid transparent';
+        b.style.color = 'var(--gray)';
+    });
+    btn.style.borderBottom = '3px solid var(--secondary)';
+    btn.style.color = 'var(--secondary)';
+}
+// Check URL hash for direct link to seekers tab
+if (window.location.hash === '#seekers') {
+    showTab('seeker', document.querySelectorAll('.tab-btn')[1]);
+}
+</script>
+</body>
+</html>

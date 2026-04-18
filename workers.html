@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Workers | Mama Network 🇰🇪</title>
+    <meta name="description" content="Browse trusted Kenyan workers available for house cleaning, cooking, babysitting, gardening and more. Verified profiles with track records.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="trust-bar">
+    🇰🇪 Built for Kenyans &nbsp;<span>|</span>&nbsp; Simple, Fair & Human &nbsp;<span>|</span>&nbsp; Mahali kazi inapatikana
+</div>
+
+<header>
+    <div class="container">
+        <nav class="nav-inner">
+                <a href="index.html" class="logo-wrap">
+                    <img src="assets/logo.png" alt="Mama Network Logo" class="logo-img">
+                    <span class="logo-text">Mama <span>Network</span></span>
+                </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="workers.html" class="active">Find Workers</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="post-job.html">Post a Job</a></li>
+            </ul>
+            <div class="nav-ctas">
+                <a href="jobs.html" class="btn btn-outline">Find Work</a>
+                <a href="post-job.html" class="btn btn-primary">Post a Job</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <div class="section-tag" style="background: rgba(255,255,255,0.15); color: white;">👤 Worker Profiles</div>
+            <h1>Find Trusted Workers</h1>
+            <p>Browse real worker profiles with photos, skills, and track records. Connect directly with people ready to work in your area.</p>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="post-job.html" class="btn btn-primary btn-lg">Post a Job Free</a>
+                <a href="how-it-works.html" class="btn btn-outline-white btn-lg">How It Works</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Bar -->
+<section style="background: white; padding: 30px 0; border-bottom: 1px solid #e9ecef;">
+    <div class="container">
+        <div class="categories-strip">
+            <button class="cat-chip active" onclick="filterWorkers('all', this)">All Workers</button>
+            <button class="cat-chip" onclick="filterWorkers('cleaning', this)">🏠 Cleaners</button>
+            <button class="cat-chip" onclick="filterWorkers('cooking', this)">🍲 Cooks</button>
+            <button class="cat-chip" onclick="filterWorkers('babysitting', this)">👶 Babysitters</button>
+            <button class="cat-chip" onclick="filterWorkers('gardening', this)">🌳 Gardeners</button>
+            <button class="cat-chip" onclick="filterWorkers('moving', this)">📦 Moving Help</button>
+            <button class="cat-chip" onclick="filterWorkers('promo', this)">🎉 Promoters</button>
+        </div>
+    </div>
+</section>
+
+<!-- Workers Grid -->
+<section class="section">
+    <div class="container">
+        <div class="section-heading" style="margin-bottom: 30px;">
+            <h2 style="font-size: 1.8rem; font-weight: 900; color: var(--dark);">Available Workers <span style="color: var(--secondary);">(24)</span></h2>
+            <p style="color: var(--gray);">Ready to work near Nairobi and across Kenya</p>
+        </div>
+
+        <div class="workers-grid" id="workers-grid">
+
+            <div class="worker-card" data-skill="cleaning">
+                <span class="verified-badge">✅ Verified</span>
+                <div class="worker-avatar-placeholder">👩🏾</div>
+                <h3>Wanjiru M.</h3>
+                <p class="worker-location">📍 Kasarani, Nairobi &bull; Age 32</p>
+                <div class="worker-tags">
+                    <span class="worker-tag">House Cleaning</span>
+                    <span class="worker-tag">Laundry</span>
+                    <span class="worker-tag hired">Previously Hired</span>
+                    <span class="worker-tag recommended">Recommended</span>
+                </div>
+                <p class="worker-rating" style="margin-bottom: 14px;">⭐⭐⭐⭐⭐ 12 past jobs</p>
+                <a href="#" class="btn btn-green" style="width:100%; justify-content:center; font-size:0.85rem;" onclick="showWorkerModal(); return false;">View Full Profile</a>
+            </div>
+
+            <div class="worker-card" data-skill="cooking">
+                <span class="verified-badge">✅ Verified</span>
+                <div class="worker-avatar-placeholder">👩🏿</div>
+                <h3>Aisha K.</h3>
+                <p class="worker-location">📍 Embakasi, Nairobi &bull; Age 27</p>
+                <div class="worker-tags">
+                    <span class="worker-tag">Cooking</span>
+                    <span class="worker-tag">Swahili Food</span>
+                    <span class="worker-tag">Catering</span>
+                    <span class="worker-tag hired">Previously Hired</span>
+                </div>
+                <p class="worker-rating" style="margin-bottom: 14px;">⭐⭐⭐⭐⭐ 8 past jobs</p>
+                <a href="#" class="btn btn-green" style="width:100%; justify-content:center; font-size:0.85rem;" onclick="showWorkerModal(); return false;">View Full Profile</a>
+            </div>
+
+            <div class="worker-card" data-skill="babysitting">
+                <div class="worker-avatar-placeholder">👩🏾</div>
+                <h3>Grace O.</h3>
+                <p class="worker-location">📍 Westlands, Nairobi &bull; Age 24</p>
+                <div class="worker-tags">
+                    <span class="worker-tag">Babysitting</span>
+                    <span class="worker-tag">Nanny</span>
+                    <span class="worker-tag">First Aid</span>
+                </div>
+                <p class="worker-rating" style="margin-bottom: 14px;">⭐⭐⭐⭐ 4 past jobs</p>
+                <a href="#" class="btn btn-green" style="width:100%; justify-content:center; font-size:0.85rem;" onclick="showWorkerModal(); return false;">View Full Profile</a>
+            </div>
+
+            <div class="worker-card" data-skill="gardening moving">
+                <span class="verified-badge">✅ Verified</span>
+                <div class="worker-avatar-placeholder">👨🏿</div>
+                <h3>James N.</h3>
+                <p class="worker-location">📍 Ngong, Nairobi &bull; Age 35</p>
+                <div class="worker-tags">
+                    <span class="worker-tag">Gardening</span>
+                    <span class="worker-tag">Moving</span>
+                    <span class="worker-tag hired">Previously Hired</span>
+                </div>
+                <p class="worker-rating" style="margin-bottom: 14px;">⭐⭐⭐⭐⭐ 20 past jobs</p>
+                <a href="#" class="btn btn-green" style="width:100%; justify-content:center; font-size:0.85rem;" onclick="showWorkerModal(); return false;">View Full Profile</a>
+            </div>
+
+            <div class="worker-card" data-skill="promo">
+                <div class="worker-avatar-placeholder">👩🏾</div>
+                <h3>Mercy J.</h3>
+                <p class="worker-location">📍 CBD Nairobi &bull; Age 22</p>
+                <div class="worker-tags">
+                    <span class="worker-tag">Promotions</span>
+                    <span class="worker-tag">Events</span>
+                    <span class="worker-tag">Waitressing</span>
+                </div>
+                <p class="worker-rating" style="margin-bottom: 14px;">⭐⭐⭐⭐ 6 past jobs</p>
+                <a href="#" class="btn btn-green" style="width:100%; justify-content:center; font-size:0.85rem;" onclick="showWorkerModal(); return false;">View Full Profile</a>
+            </div>
+
+            <div class="worker-card" data-skill="cleaning cooking">
+                <span class="verified-badge">✅ Verified</span>
+                <div class="worker-avatar-placeholder">👩🏿</div>
+                <h3>Faith W.</h3>
+                <p class="worker-location">📍 Kayole, Nairobi &bull; Age 29</p>
+                <div class="worker-tags">
+                    <span class="worker-tag">Cleaning</span>
+                    <span class="worker-tag">Cooking</span>
+                    <span class="worker-tag recommended">Recommended</span>
+                </div>
+                <p class="worker-rating" style="margin-bottom: 14px;">⭐⭐⭐⭐⭐ 15 past jobs</p>
+                <a href="#" class="btn btn-green" style="width:100%; justify-content:center; font-size:0.85rem;" onclick="showWorkerModal(); return false;">View Full Profile</a>
+            </div>
+
+            <div class="worker-card" data-skill="moving">
+                <div class="worker-avatar-placeholder">👨🏾</div>
+                <h3>Peter O.</h3>
+                <p class="worker-location">📍 Ruaka &bull; Age 30</p>
+                <div class="worker-tags">
+                    <span class="worker-tag">Moving</span>
+                    <span class="worker-tag">Heavy Lifting</span>
+                    <span class="worker-tag">Loading</span>
+                </div>
+                <p class="worker-rating" style="margin-bottom: 14px;">⭐⭐⭐⭐ 9 past jobs</p>
+                <a href="#" class="btn btn-green" style="width:100%; justify-content:center; font-size:0.85rem;" onclick="showWorkerModal(); return false;">View Full Profile</a>
+            </div>
+
+            <div class="worker-card" data-skill="babysitting cleaning">
+                <span class="verified-badge">✅ Verified</span>
+                <div class="worker-avatar-placeholder">👩🏾</div>
+                <h3>Carol M.</h3>
+                <p class="worker-location">📍 Kileleshwa &bull; Age 26</p>
+                <div class="worker-tags">
+                    <span class="worker-tag">Babysitter</span>
+                    <span class="worker-tag">Cleaning</span>
+                    <span class="worker-tag hired">Previously Hired</span>
+                </div>
+                <p class="worker-rating" style="margin-bottom: 14px;">⭐⭐⭐⭐⭐ 11 past jobs</p>
+                <a href="#" class="btn btn-green" style="width:100%; justify-content:center; font-size:0.85rem;" onclick="showWorkerModal(); return false;">View Full Profile</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Worker Modal -->
+<div id="worker-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center; backdrop-filter: blur(4px);">
+    <div style="background:white; border-radius: 24px; padding: 48px 40px; max-width: 480px; width: 90%; text-align: center; position: relative; box-shadow: 0 24px 80px rgba(0,0,0,0.2);">
+        <button onclick="hideWorkerModal()" style="position:absolute; top:16px; right:20px; background:none; border:none; font-size:1.5rem; cursor:pointer; color: #888;">✕</button>
+        <div style="width:80px; height:80px; border-radius:50%; background: linear-gradient(135deg, var(--secondary), var(--primary)); display:flex; align-items:center; justify-content:center; font-size:2.4rem; margin: 0 auto 20px;">👩🏾</div>
+        <h2 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 6px;">Wanjiru M.</h2>
+        <p style="color: var(--gray); margin-bottom: 20px;">📍 Kasarani, Nairobi &bull; Age 32</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px;">
+            <span class="worker-tag hired">Previously Hired ×12</span>
+            <span class="worker-tag recommended">Recommended</span>
+            <span class="worker-tag">House Cleaning</span>
+            <span class="worker-tag">Laundry</span>
+        </div>
+        <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 28px;">⭐⭐⭐⭐⭐ Highly trusted by past employers. Available Mon–Sat. Speaks English & Swahili.</p>
+        <div style="background: #f0f7f2; border-radius: 14px; padding: 20px; margin-bottom: 24px;">
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Unlock Contact Fee</div>
+            <div style="font-size: 2.5rem; font-weight: 900; color: var(--secondary);">KSh 30</div>
+            <div style="font-size: 0.8rem; color: var(--gray);">Get her phone number directly</div>
+        </div>
+        <a href="#" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">🔓 Unlock Contact Now</a>
+    </div>
+</div>
+
+<!-- Are you a worker? CTA -->
+<section class="section section-alt">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div>
+                <div class="section-tag">🌸 Join as a Worker</div>
+                <h2 style="font-size: 2.2rem; font-weight: 900; color: var(--dark); margin-bottom: 18px;">Ready to Work? <span style="color: var(--secondary);">Create Your Profile.</span></h2>
+                <p style="color: var(--gray); margin-bottom: 28px;">Your profile is your cv. Add your photo, name, skills and location — and let job posters find you. It's free, fast and simple.</p>
+                <ul style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px;">
+                    <li style="display:flex; gap: 12px;"><span style="font-size:1.3rem;">📸</span> <div><strong>Add your photo & details</strong><br><span style="color: var(--gray); font-size: 0.88rem;">Let people know who they're hiring.</span></div></li>
+                    <li style="display:flex; gap: 12px;"><span style="font-size:1.3rem;">💰</span> <div><strong>Pay only to reach out</strong><br><span style="color: var(--gray); font-size: 0.88rem;">KSh 30 to unlock a job contact.</span></div></li>
+                    <li style="display:flex; gap: 12px;"><span style="font-size:1.3rem;">⭐</span> <div><strong>Build your track record</strong><br><span style="color: var(--gray); font-size: 0.88rem;">Get "Previously Hired" badges over time.</span></div></li>
+                </ul>
+                <a href="post-job.html#register" class="btn btn-green btn-lg">Create My Profile Free →</a>
+            </div>
+            <div style="background: linear-gradient(135deg, #1A6B2F, #F5A623); border-radius: 28px; padding: 50px 40px; color: white; text-align: center;">
+                <div style="font-size: 4rem; margin-bottom: 20px;">🏃‍♀️</div>
+                <h3 style="font-size: 1.8rem; font-weight: 900; margin-bottom: 12px; color: white;">Watafuta Kazi</h3>
+                <p style="opacity: 0.85; font-size: 1rem;">Join thousands of workers across Kenya who found work through Mama Network — the simple, fair way.</p>
+                <div style="margin-top: 24px; font-size: 0.9rem; opacity: 0.75; font-style: italic;">"Nilikuta kazi ndani ya siku mbili!" — Grace, Nairobi</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner">
+    <div class="container">
+        <h2>Post a Job. It's Free.</h2>
+        <p>Find the right help for your home, shop or event in minutes. No complicated forms.</p>
+        <div class="btn-row">
+            <a href="post-job.html" class="btn btn-primary btn-lg">📋 Post a Job Now</a>
+            <a href="how-it-works.html" class="btn btn-outline-white btn-lg">How It Works</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Mama Network" class="footer-logo-img" onerror="this.style.display='none'">
+                    <span class="footer-logo-text">Mama Network</span>
+                </div>
+                <p>Mahali kazi inapatikana.<br>A place where hustle meets opportunity. 🇰🇪</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="jobs.html">Browse Jobs</a></li>
+                    <li><a href="workers.html">Find Workers</a></li>
+                    <li><a href="post-job.html">Post a Job</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>For Workers</h4>
+                <ul>
+                    <li><a href="workers.html">Create Profile</a></li>
+                    <li><a href="jobs.html">Browse Opportunities</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Nairobi, Kenya</a></li>
+                    <li><a href="mailto:info@mamanetwork.co.ke">info@mamanetwork.co.ke</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mama Network Kenya. Built with ❤️</p>
+            <span class="footer-flag">🇰🇪</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+function showWorkerModal() {
+    document.getElementById('worker-modal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function hideWorkerModal() {
+    document.getElementById('worker-modal').style.display = 'none';
+    document.body.style.overflow = '';
+}
+document.getElementById('worker-modal').addEventListener('click', function(e) {
+    if (e.target === this) hideWorkerModal();
+});
+function filterWorkers(skill, btn) {
+    document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    const cards = document.querySelectorAll('#workers-grid .worker-card');
+    cards.forEach(card => {
+        const cardSkills = card.dataset.skill || '';
+        if (skill === 'all' || cardSkills.includes(skill)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+</body>
+</html>

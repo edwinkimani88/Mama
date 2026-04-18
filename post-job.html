@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job | Mama Network 🇰🇪</title>
+    <meta name="description" content="Post a casual job for free on Mama Network Kenya. Find trusted house cleaners, cooks, babysitters, gardeners and more in Nairobi.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="trust-bar">
+    🇰🇪 Built for Kenyans &nbsp;<span>|</span>&nbsp; Simple, Fair & Human &nbsp;<span>|</span>&nbsp; Mahali kazi inapatikana
+</div>
+
+<header>
+    <div class="container">
+        <nav class="nav-inner">
+                <a href="index.html" class="logo-wrap">
+                    <img src="assets/logo.png" alt="Mama Network Logo" class="logo-img">
+                    <span class="logo-text">Mama <span>Network</span></span>
+                </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="workers.html">Find Workers</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="post-job.html" class="active">Post a Job</a></li>
+            </ul>
+            <div class="nav-ctas">
+                <a href="jobs.html" class="btn btn-outline">Find Work</a>
+                <a href="post-job.html" class="btn btn-primary">Post a Job</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <div class="section-tag" style="background: rgba(255,255,255,0.15); color: white;">📋 It's Free</div>
+            <h1>Post Your Job Here</h1>
+            <p>No account, no complicated forms. Just tell us what you need, where you are, and what you're paying. Workers will find you.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Forms Section -->
+<section class="section" id="poster-form">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 60px; align-items: start;">
+
+            <!-- The Form -->
+            <div>
+                <div class="section-heading">
+                    <div class="section-tag">📋 Wenye Kazi — Post a Job</div>
+                    <h2 style="font-size: 2rem; font-weight: 900; color: var(--dark);">Fill in the Details Below</h2>
+                    <p style="color: var(--gray);">Your job will appear on Mama Network for workers to find and reach out.</p>
+                </div>
+
+                <div class="form-section">
+                    <form id="job-form" onsubmit="submitJob(event)">
+                        <div class="form-group">
+                            <label for="job-type">Type of Work *</label>
+                            <select id="job-type" required>
+                                <option value="">Select the type of job...</option>
+                                <option>🏠 House Cleaning</option>
+                                <option>🍲 Cooking / Kitchen Help</option>
+                                <option>👶 Babysitting / Nanny</option>
+                                <option>🌳 Gardening</option>
+                                <option>📦 Moving &amp; Lifting</option>
+                                <option>🏪 Shop Helping</option>
+                                <option>🍽️ Waitressing</option>
+                                <option>🎉 Promotional / Events</option>
+                                <option>🔧 General Kibarua</option>
+                                <option>Other...</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="job-location">Location *</label>
+                                <input type="text" id="job-location" placeholder="e.g. Kilimani, Nairobi" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="job-pay">Payment Offered *</label>
+                                <input type="text" id="job-pay" placeholder="e.g. KSh 800/day or 15,000/mo" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-schedule">Schedule / Duration</label>
+                            <input type="text" id="job-schedule" placeholder="e.g. Every Saturday, or Mon–Fri, or One day only">
+                        </div>
+                        <div class="form-group">
+                            <label for="job-desc">Brief Description *</label>
+                            <textarea id="job-desc" rows="4" placeholder="Describe the task in simple, clear terms. What exactly needs to be done? Any special requirements?" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-prefs">Preferences (Optional)</label>
+                            <input type="text" id="job-prefs" placeholder="e.g. Woman preferred, must have experience, near matatu stage...">
+                        </div>
+                        <hr style="border: none; border-top: 1px solid var(--gray-light); margin: 24px 0;">
+                        <div class="section-tag" style="margin-bottom: 16px;">📞 Your Contact Info</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="poster-name">Your Name *</label>
+                                <input type="text" id="poster-name" placeholder="e.g. Mama Janet" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="poster-phone">Phone Number *</label>
+                                <input type="tel" id="poster-phone" placeholder="e.g. 07XX XXX XXX" required>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.82rem; color: var(--gray); margin-bottom: 24px;">🔒 Your phone number is kept private. Workers pay KSh 30 to unlock it — so only serious people contact you.</p>
+                        <button type="submit" class="btn btn-green btn-lg" style="width: 100%; justify-content: center;">📋 Post My Job for Free →</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div style="position: sticky; top: 140px;">
+                <!-- How it works mini -->
+                <div style="background: var(--white); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-sm); margin-bottom: 24px;">
+                    <h3 style="font-weight: 900; font-size: 1.1rem; margin-bottom: 20px; color: var(--dark);">⚖️ How it Works for You</h3>
+                    <ul style="display: flex; flex-direction: column; gap: 14px;">
+                        <li style="display:flex; gap:12px; align-items: flex-start;"><span style="background: var(--secondary); color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:900; flex-shrink:0;">1</span> <span style="font-size:0.9rem; color: var(--dark);">Post your job <strong>for free</strong></span></li>
+                        <li style="display:flex; gap:12px; align-items: flex-start;"><span style="background: var(--secondary); color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:900; flex-shrink:0;">2</span> <span style="font-size:0.9rem; color: var(--dark);">Workers <strong>find and view</strong> your job</span></li>
+                        <li style="display:flex; gap:12px; align-items: flex-start;"><span style="background: var(--secondary); color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:900; flex-shrink:0;">3</span> <span style="font-size:0.9rem; color: var(--dark);">They pay a <strong>small fee</strong> (based on job salary) to unlock your contact</span></li>
+                        <li style="display:flex; gap:12px; align-items: flex-start;"><span style="background: var(--primary); color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:900; flex-shrink:0;">✓</span> <span style="font-size:0.9rem; color: var(--dark);"><strong>They call you</strong> and you hire who you like</span></li>
+                    </ul>
+                </div>
+
+                <!-- Trust note -->
+                <div style="background: linear-gradient(135deg, #1A6B2F, #2a9244); border-radius: var(--radius); padding: 28px; color: white; margin-bottom: 24px;">
+                    <h4 style="font-weight: 900; margin-bottom: 12px; font-size: 1rem;">🔒 Your Privacy is Protected</h4>
+                    <p style="font-size: 0.88rem; opacity: 0.9;">Your phone number is never displayed publicly. Workers must pay to see it — so only serious people contact you.</p>
+                </div>
+
+                <!-- Popular types -->
+                <div style="background: #f8f9fa; border-radius: var(--radius); padding: 28px; border: 1px solid var(--gray-light);">
+                    <h4 style="font-weight: 800; margin-bottom: 14px; font-size: 0.95rem; color: var(--dark);">🔥 Most Posted Jobs</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 10px;">
+                        <li style="font-size: 0.88rem; display: flex; justify-content: space-between;"><span>🏠 House Cleaning</span> <strong style="color:var(--secondary);">38%</strong></li>
+                        <li style="font-size: 0.88rem; display: flex; justify-content: space-between;"><span>🍲 Cooking Help</span> <strong style="color:var(--secondary);">22%</strong></li>
+                        <li style="font-size: 0.88nm; display: flex; justify-content: space-between;"><span>👶 Babysitting</span> <strong style="color:var(--secondary);">19%</strong></li>
+                        <li style="font-size: 0.88rem; display: flex; justify-content: space-between;"><span>🌳 Gardening</span> <strong style="color:var(--secondary);">12%</strong></li>
+                        <li style="font-size: 0.88rem; display: flex; justify-content: space-between;"><span>📦 Moving / Other</span> <strong style="color:var(--secondary);">9%</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Worker Registration -->
+<section class="section section-alt" id="register">
+    <div class="container">
+        <div class="section-heading center">
+            <div class="section-tag">🌸 Are you a Worker?</div>
+            <h2>Create Your <span>Worker Profile</span></h2>
+            <p>It's free to create your profile. Start getting found by job posters today.</p>
+        </div>
+        <div class="form-section">
+            <form id="worker-form" onsubmit="submitWorker(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="w-name">Your Name *</label>
+                        <input type="text" id="w-name" placeholder="e.g. Wanjiru M." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="w-age">Age *</label>
+                        <input type="number" id="w-age" placeholder="e.g. 28" min="16" max="65" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="w-location">Your Location *</label>
+                        <input type="text" id="w-location" placeholder="e.g. Kasarani, Nairobi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="w-phone">Phone Number *</label>
+                        <input type="tel" id="w-phone" placeholder="07XX XXX XXX" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="w-skills">Skills / Type of Work *</label>
+                    <select id="w-skills" required>
+                        <option value="">What kind of work do you do?</option>
+                        <option>🏠 House Cleaning</option>
+                        <option>🍲 Cooking / Kitchen Help</option>
+                        <option>👶 Babysitting / Nanny</option>
+                        <option>🌳 Gardening</option>
+                        <option>📦 Moving &amp; Lifting</option>
+                        <option>🏪 Shop Helping</option>
+                        <option>🍽️ Waitressing</option>
+                        <option>🎉 Promotional / Events</option>
+                        <option>Multiple / General</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="w-avail">Availability *</label>
+                    <input type="text" id="w-avail" placeholder="e.g. Available Mon–Sat, any time OR weekends only" required>
+                </div>
+                <div class="form-group">
+                    <label for="w-about">A little about yourself (optional)</label>
+                    <textarea id="w-about" rows="3" placeholder="e.g. I have 3 years cleaning experience in Nairobi. Honest and hardworking..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">🌸 Create My Worker Profile Free →</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Success Modal -->
+<div id="success-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center; backdrop-filter:blur(4px);">
+    <div style="background:white; border-radius:24px; padding:48px 40px; max-width:420px; width:90%; text-align:center; box-shadow:0 24px 80px rgba(0,0,0,0.2);">
+        <div style="font-size:4rem; margin-bottom:16px;">🎉</div>
+        <h2 style="font-size:1.6rem; font-weight:900; margin-bottom:12px; color:var(--secondary);" id="modal-title">Job Posted!</h2>
+        <p style="color:var(--gray); margin-bottom:28px;" id="modal-msg">Your job is now live on Mama Network. Workers will find it and reach out to you soon!</p>
+        <a href="jobs.html" class="btn btn-green btn-lg" style="width:100%; justify-content:center;">🔍 View All Jobs</a>
+        <div style="margin-top:12px;">
+            <a href="index.html" style="color:var(--gray); font-size:0.88rem;">← Back to Home</a>
+        </div>
+    </div>
+</div>
+
+<section class="cta-banner">
+    <div class="container">
+        <h2>Mama Network</h2>
+        <p style="font-style: italic; font-size: 1.2rem;">"Mahali kazi inapatikana."<br><span style="opacity: 0.7; font-size: 1rem; font-style: normal;">A place where hustle meets opportunity.</span></p>
+        <div class="btn-row">
+            <a href="jobs.html" class="btn btn-primary btn-lg">Browse Available Jobs</a>
+            <a href="workers.html" class="btn btn-outline-white btn-lg">Find Workers</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Mama Network" class="footer-logo-img" onerror="this.style.display='none'">
+                    <span class="footer-logo-text">Mama Network</span>
+                </div>
+                <p>Mahali kazi inapatikana.<br>A place where hustle meets opportunity. 🇰🇪</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="jobs.html">Browse Jobs</a></li>
+                    <li><a href="workers.html">Find Workers</a></li>
+                    <li><a href="post-job.html">Post a Job</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>For Workers</h4>
+                <ul>
+                    <li><a href="workers.html">Create Profile</a></li>
+                    <li><a href="jobs.html">Browse Opportunities</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Nairobi, Kenya</a></li>
+                    <li><a href="mailto:info@mamanetwork.co.ke">info@mamanetwork.co.ke</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mama Network Kenya. Built with ❤️</p>
+            <span class="footer-flag">🇰🇪</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+function submitJob(e) {
+    e.preventDefault();
+    document.getElementById('modal-title').textContent = '🎉 Job Posted Successfully!';
+    document.getElementById('modal-msg').textContent = 'Your job is now live on Mama Network. Workers will find it and reach out to you soon. Asante!';
+    document.getElementById('success-modal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function submitWorker(e) {
+    e.preventDefault();
+    document.getElementById('modal-title').textContent = '🌸 Profile Created!';
+    document.getElementById('modal-msg').textContent = 'Your worker profile is live! Start browsing jobs and unlock contacts for just KSh 30. Good luck, hustler!';
+    document.getElementById('success-modal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+</script>
+</body>
+</html>

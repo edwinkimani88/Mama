@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Jobs | Mama Network 🇰🇪</title>
+    <meta name="description" content="Find everyday job opportunities in Nairobi and around Kenya. House cleaning, cooking, babysitting, gardening, and more kibarua work near you.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="trust-bar">
+    🇰🇪 Built for Kenyans &nbsp;<span>|</span>&nbsp; Simple, Fair & Human &nbsp;<span>|</span>&nbsp; Mahali kazi inapatikana
+</div>
+
+<header>
+    <div class="container">
+        <nav class="nav-inner">
+                <a href="index.html" class="logo-wrap">
+                    <img src="assets/logo.png" alt="Mama Network Logo" class="logo-img">
+                    <span class="logo-text">Mama <span>Network</span></span>
+                </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html" class="active">Browse Jobs</a></li>
+                <li><a href="workers.html">Find Workers</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="post-job.html">Post a Job</a></li>
+            </ul>
+            <div class="nav-ctas">
+                <a href="jobs.html" class="btn btn-outline">Find Work</a>
+                <a href="post-job.html" class="btn btn-primary">Post a Job</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <div class="section-tag" style="background: rgba(255,255,255,0.15); color: white;">💼 Available Jobs</div>
+            <h1>Find Work Near You</h1>
+            <p>Real opportunities. Real pay. Browse jobs around Nairobi and Kenya posted by people who need help today.</p>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="how-it-works.html#seekers" class="btn btn-primary btn-lg">How to Apply</a>
+                <a href="workers.html" class="btn btn-outline-white btn-lg">Create Your Profile</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filters -->
+<section style="background: white; padding: 30px 0; border-bottom: 1px solid #e9ecef;">
+    <div class="container">
+        <div class="categories-strip">
+            <button class="cat-chip active" onclick="filterJobs('all', this)">All Jobs</button>
+            <button class="cat-chip" onclick="filterJobs('cleaning', this)">🏠 House Cleaning</button>
+            <button class="cat-chip" onclick="filterJobs('cooking', this)">🍲 Cooking</button>
+            <button class="cat-chip" onclick="filterJobs('babysitting', this)">👶 Babysitting</button>
+            <button class="cat-chip" onclick="filterJobs('gardening', this)">🌳 Gardening</button>
+            <button class="cat-chip" onclick="filterJobs('moving', this)">📦 Moving</button>
+            <button class="cat-chip" onclick="filterJobs('shop', this)">🏪 Shop Help</button>
+            <button class="cat-chip" onclick="filterJobs('promo', this)">🎉 Promo / Events</button>
+        </div>
+    </div>
+</section>
+
+<!-- Fee Tier Explainer -->
+<div style="background: #fffbf0; border-top: 1px solid #f5d992; border-bottom: 1px solid #f5d992; padding: 16px 0;">
+    <div class="container">
+        <p style="font-size: 0.88rem; color: #7a5c00; font-weight: 600; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+            <span>💡 <strong>How the unlock fee works:</strong> The fee varies by job salary — the more the job pays, the slightly higher the fee.</span>
+            <span style="opacity: 0.6;">|</span>
+            <span>🟢 Small kibarua (under KSh 1,000) → <strong>KSh 100</strong></span>
+            <span>🟡 Daily/weekly jobs → <strong>KSh 200</strong></span>
+            <span>🟠 Monthly mid-range → <strong>KSh 1,000</strong></span>
+            <span>🔴 Monthly KSh 15K+ → <strong>KSh 2,000</strong></span>
+        </p>
+    </div>
+</div>
+
+<!-- Jobs Listing -->
+<section class="section">
+    <div class="container">
+        <div class="section-heading" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;">
+            <div>
+                <h2 style="font-size: 1.8rem; font-weight: 900; color: var(--dark);">Available Jobs <span style="color: var(--secondary);">(18)</span></h2>
+                <p style="color: var(--gray);">Nairobi & surrounding areas</p>
+            </div>
+            <select style="padding: 12px 18px; border: 1.5px solid #e9ecef; border-radius: 10px; font-size: 0.9rem; font-weight: 600;">
+                <option>Most Recent</option>
+                <option>Highest Pay</option>
+                <option>Nearest to Me</option>
+            </select>
+        </div>
+
+        <div class="jobs-grid" id="jobs-grid">
+
+            <!-- Job 1 -->
+            <div class="job-card" data-category="cleaning">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #1A6B2F, #a8d5b5);">🏠</div>
+                <div class="job-card-body">
+                    <span class="job-badge">House Cleaning</span>
+                    <h3>Weekly House Cleaner Needed</h3>
+                    <p>3-bedroom house in Kilimani. Needs sweeping, mopping, dusting and laundry. Every Saturday.</p>
+                    <div class="job-meta">
+                        <span>📍 Kilimani</span>
+                        <span>📅 Weekly</span>
+                        <span class="job-pay">KSh 800</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal('Weekly House Cleaner Needed', 'KSh 100'); return false;">🔓 Unlock Contact — <strong>KSh 100</strong></a>
+                </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job-card" data-category="cooking">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #F5A623, #f7d186);">🍲</div>
+                <div class="job-card-body">
+                    <span class="job-badge">Cooking</span>
+                    <h3>Cook Needed for Family of 5</h3>
+                    <p>Prepare lunch and dinner Monday to Friday. Must know how to cook Swahili food and chapati.</p>
+                    <div class="job-meta">
+                        <span>📍 South B</span>
+                        <span>📅 Mon-Fri</span>
+                        <span class="job-pay">KSh 15,000/mo</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal('Cook Needed for Family of 5', 'KSh 1,000'); return false;">🔓 Unlock Contact — <strong>KSh 1,000</strong></a>
+                </div>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="job-card" data-category="babysitting">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #e74c3c, #f1948a);">👶</div>
+                <div class="job-card-body">
+                    <span class="job-badge">Babysitting</span>
+                    <h3>Nanny for 2 Kids (Ages 2 & 5)</h3>
+                    <p>Live-in or live-out welcome. Take care of 2 children while parents are at work. Westlands area.</p>
+                    <div class="job-meta">
+                        <span>📍 Westlands</span>
+                        <span>📅 Daily</span>
+                        <span class="job-pay">KSh 20,000/mo</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal('Nanny for 2 Kids (Ages 2 &amp; 5)', 'KSh 2,000'); return false;">🔓 Unlock Contact — <strong>KSh 2,000</strong></a>
+                </div>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="job-card" data-category="gardening">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #27ae60, #82e0aa);">🌳</div>
+                <div class="job-card-body">
+                    <span class="job-badge">Gardening</span>
+                    <h3>Garden Maintenance — Karen</h3>
+                    <p>Large compound with lots of plants. Need someone who knows pruning, mowing and watering.</p>
+                    <div class="job-meta">
+                        <span>📍 Karen</span>
+                        <span>📅 2x/week</span>
+                        <span class="job-pay">KSh 600/day</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal('Garden Maintenance — Karen', 'KSh 200'); return false;">🔓 Unlock Contact — <strong>KSh 200</strong></a>
+                </div>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="job-card" data-category="moving">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #2980b9, #7fb3d3);">📦</div>
+                <div class="job-card-body">
+                    <span class="job-badge">Moving</span>
+                    <h3>Help Moving House — Ruaka</h3>
+                    <p>Need 2–3 people for a full day of moving furniture and boxes from Ruaka to Kikuyu.</p>
+                    <div class="job-meta">
+                        <span>📍 Ruaka</span>
+                        <span>📅 One Day</span>
+                        <span class="job-pay">KSh 1,500</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal('Help Moving House — Ruaka', 'KSh 100'); return false;">🔓 Unlock Contact — <strong>KSh 100</strong></a>
+                </div>
+            </div>
+
+            <!-- Job 6 -->
+            <div class="job-card" data-category="shop">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #8e44ad, #c39bd3);">🏪</div>
+                <div class="job-card-body">
+                    <span class="job-badge">Shop Help</span>
+                    <h3>Shop Attendant — Githurai</h3>
+                    <p>Busy clothes shop needs extra help over the weekend. Must be energetic and trustworthy.</p>
+                    <div class="job-meta">
+                        <span>📍 Githurai</span>
+                        <span>📅 Weekend</span>
+                        <span class="job-pay">KSh 700/day</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal('Shop Attendant — Githurai', 'KSh 200'); return false;">🔓 Unlock Contact — <strong>KSh 200</strong></a>
+                </div>
+            </div>
+
+            <!-- Job 7 -->
+            <div class="job-card" data-category="promo">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #c0392b, #f0b27a);">🎉</div>
+                <div class="job-card-body">
+                    <span class="job-badge">Promo / Events</span>
+                    <h3>Brand Promoters — Weekend Event</h3>
+                    <p>Looking for 5 energetic ladies for a product activation in Nairobi CBD. Uniform provided.</p>
+                    <div class="job-meta">
+                        <span>📍 CBD Nairobi</span>
+                        <span>📅 Sat–Sun</span>
+                        <span class="job-pay">KSh 2,000/day</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal('Brand Promoters — Weekend Event', 'KSh 200'); return false;">🔓 Unlock Contact — <strong>KSh 200</strong></a>
+                </div>
+            </div>
+
+            <!-- Job 8 -->
+            <div class="job-card" data-category="cleaning">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #1A6B2F, #F5A623);">🧹</div>
+                <div class="job-card-body">
+                    <span class="job-badge">House Cleaning</span>
+                    <h3>Office Cleaner — Upperhill</h3>
+                    <p>Small office building needs early-morning cleaning. Monday to Friday. Transport facilitated.</p>
+                    <div class="job-meta">
+                        <span>📍 Upperhill</span>
+                        <span>📅 Mon–Fri</span>
+                        <span class="job-pay">KSh 12,000/mo</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal('Office Cleaner — Upperhill', 'KSh 1,000'); return false;">🔓 Unlock Contact — <strong>KSh 1,000</strong></a>
+                </div>
+            </div>
+
+            <!-- Job 9 -->
+            <div class="job-card" data-category="cooking">
+                <div class="job-card-img" style="background: linear-gradient(135deg, #F5A623, #1A6B2F);">🍳</div>
+                <div class="job-card-body">
+                    <span class="job-badge">Cooking</span>
+                    <h3>Catering help — Wedding Event</h3>
+                    <p>Need 3 experienced cooks for a wedding in Kiambu. Must be available for full day. Lunch and tips provided.</p>
+                    <div class="job-meta">
+                        <span>📍 Kiambu</span>
+                        <span>📅 One Day</span>
+                        <span class="job-pay">KSh 2,500</span>
+                    </div>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;" onclick="showModal(); return false;">🔓 Unlock Contact — KSh 30</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Unlock Modal -->
+<div id="unlock-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center; backdrop-filter: blur(4px);">
+    <div style="background:white; border-radius: 24px; padding: 48px 40px; max-width: 460px; width: 90%; text-align: center; position: relative; box-shadow: 0 24px 80px rgba(0,0,0,0.2);">
+        <button onclick="hideModal()" style="position:absolute; top:16px; right:20px; background:none; border:none; font-size:1.5rem; cursor:pointer; color: #888;">✕</button>
+        <div style="font-size: 3rem; margin-bottom: 16px;">🔓</div>
+        <h2 style="font-size: 1.5rem; font-weight: 900; color: var(--dark); margin-bottom: 6px;">Unlock Job Contact</h2>
+        <p id="modal-job-title" style="color: var(--secondary); font-weight: 700; font-size: 0.95rem; margin-bottom: 14px;"></p>
+        <p style="color: var(--gray); font-size: 0.92rem; margin-bottom: 24px;">Pay a once-off access fee to see the job poster's phone number and reach out directly to secure this opportunity.</p>
+        <div style="background: #f0f7f2; border-radius: 14px; padding: 22px; margin-bottom: 20px;">
+            <div style="font-size: 0.78rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Unlock Fee for This Job</div>
+            <div id="modal-fee" style="font-size: 2.8rem; font-weight: 900; color: var(--secondary); line-height: 1;"></div>
+            <div style="font-size: 0.8rem; color: var(--gray); margin-top: 6px;">One-time fee · Based on job salary level</div>
+        </div>
+        <div style="background: #fffbf0; border-radius: 10px; padding: 12px 16px; margin-bottom: 22px; font-size: 0.8rem; color: #7a5c00; text-align: left;">
+            💡 <strong>Why does the fee vary?</strong> Higher-paying jobs carry a proportionally higher access fee — keeping the system fair for everyone.
+        </div>
+        <a href="workers.html" class="btn btn-green btn-lg" style="width: 100%; justify-content: center; margin-bottom: 12px;">Create Profile to Unlock</a>
+        <p style="font-size: 0.78rem; color: var(--gray);">You need a free worker profile to unlock job contacts.</p>
+    </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>Are You a Job Poster?</h2>
+        <p>Post your job for free. No complicated forms. Just tell us what you need and where you are.</p>
+        <div class="btn-row">
+            <a href="post-job.html" class="btn btn-primary btn-lg">📋 Post a Job Free</a>
+            <a href="how-it-works.html" class="btn btn-outline-white btn-lg">How It Works</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Mama Network" class="footer-logo-img" onerror="this.style.display='none'">
+                    <span class="footer-logo-text">Mama Network</span>
+                </div>
+                <p>Mahali kazi inapatikana.<br>A place where hustle meets opportunity. 🇰🇪</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="jobs.html">Browse Jobs</a></li>
+                    <li><a href="workers.html">Find Workers</a></li>
+                    <li><a href="post-job.html">Post a Job</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>For Workers</h4>
+                <ul>
+                    <li><a href="workers.html">Create Profile</a></li>
+                    <li><a href="jobs.html">Browse Opportunities</a></li>
+                    <li><a href="how-it-works.html#seekers">How to Get Hired</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Nairobi, Kenya</a></li>
+                    <li><a href="mailto:info@mamanetwork.co.ke">info@mamanetwork.co.ke</a></li>
+                    <li><a href="#">0700 000 000</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mama Network Kenya. Built with ❤️ for Kenyan women &amp; hustlers.</p>
+            <span class="footer-flag">🇰🇪</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+function showModal(jobTitle, fee) {
+    document.getElementById('modal-job-title').textContent = jobTitle || '';
+    document.getElementById('modal-fee').textContent = fee || '';
+    const modal = document.getElementById('unlock-modal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function hideModal() {
+    const modal = document.getElementById('unlock-modal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+document.getElementById('unlock-modal').addEventListener('click', function(e) {
+    if (e.target === this) hideModal();
+});
+
+function filterJobs(category, btn) {
+    document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    const cards = document.querySelectorAll('#jobs-grid .job-card');
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+</body>
+</html>
